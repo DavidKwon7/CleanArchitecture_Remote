@@ -8,12 +8,14 @@ import androidx.lifecycle.ViewModel
 import com.example.domain.usecase.GetUserUseCase
 import com.example.myapplicationcleanremote.model.PresentationUser
 import com.example.myapplicationcleanremote.model.PresentationUser.Companion.toPresentation
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
+@HiltViewModel
 class MainViewModel @Inject constructor(
     private val getUserUseCase: GetUserUseCase
 ) : ViewModel() {
